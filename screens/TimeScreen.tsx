@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
+import Selector from '../components/Selector';
 
 import { Text, View } from '../components/Themed';
 
@@ -8,6 +9,7 @@ export default function TimeScreen() {
     <View style={styles.container}>
       <Text style={styles.title}>Time</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <Selector />
     </View>
   );
 }
