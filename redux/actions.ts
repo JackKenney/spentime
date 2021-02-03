@@ -1,9 +1,9 @@
-export const updateActivityType = "UPDATE_ACTIVITY"
+export const updateSelectedActivityType = "UPDATE_ACTIVITY"
 
 
-export const updateActivity = (selectedActivity: number) => (
+export const updateSelectedActivity = (selectedActivity: number) => (
     {
         payload: selectedActivity,
-        type: updateActivityType,
+        type: updateSelectedActivityType,
     }
 )
