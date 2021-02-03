@@ -5,15 +5,15 @@ import { Text, View } from 'react-native';
 // redux
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
-import { StoreState } from '../redux/types';
+import { NO_ACTIVITY, StoreState } from '../redux/types';
 import { updateSelectedActivity } from '../redux/actions';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export interface Props {
     /** Slice of the redux store state. */
-    selectedActivity: number,
+    selectedActivity: string,
     /** Update selected activity in store. */
-    updateSelectedActivity: ((selectedActivity: number) => void)
+    updateSelectedActivity: ((selectedActivity: string) => void)
 }
 
 class Selector extends Component<Props> {
@@ -21,7 +21,7 @@ class Selector extends Component<Props> {
         return (
             <View>
                 <TouchableOpacity
-                    onPress={() => { this.props.updateSelectedActivity(10); }}
+                    onPress={() => { this.props.updateSelectedActivity(NO_ACTIVITY); }}
                     containerStyle={{ flex: 1 }}
                 >
                     <Text style={{ color: "#fff" }}>{this.props.selectedActivity}</Text>

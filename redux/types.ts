@@ -7,10 +7,12 @@ export interface Action {
 
 /** Global redux store state structure. */
 export interface StoreState {
-    selectedActivity: number,
+    selectedActivity: string,
     activityLog: ActivityLog,
 }
 
 export interface ActivityLog {
-    [key: string]: Date[][], // start and end datetime
+    [key: string]: Date[][], // tuples of start and end datetimes
 }
+
+export const NO_ACTIVITY = "NO_ACTIVITY"
