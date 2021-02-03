@@ -7,7 +7,7 @@ import {
 export const INITIAL_STORE: StoreState = {
     selectedActivity: NO_ACTIVITY,
     activityLog: {
-        NO_ACTIVITY: [],
+        NO_ACTIVITY: [[new Date()]],
     }
 }
 
